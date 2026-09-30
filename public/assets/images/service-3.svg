@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="svcSky3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="500" fill="url(#svcSky3)"/>
+  <!-- Sleek Twin Corporate Towers -->
+  <polygon points="180,60 320,60 320,500 180,500" fill="#0284c7" opacity="0.9"/>
+  <polygon points="360,90 500,90 500,500 360,500" fill="#0369a1" opacity="0.95"/>
+  <!-- Connecting Skybridge -->
+  <rect x="320" y="200" width="40" height="30" fill="#fbb900" opacity="0.9"/>
+  <!-- Grid Matrix Windows -->
+  <g fill="#ffffff" opacity="0.25">
+    <rect x="200" y="100" width="25" height="15"/>
+    <rect x="240" y="100" width="25" height="15"/>
+    <rect x="280" y="100" width="25" height="15"/>
+    <rect x="200" y="140" width="25" height="15"/>
+    <rect x="240" y="140" width="25" height="15"/>
+    <rect x="280" y="140" width="25" height="15"/>
+    <rect x="200" y="180" width="25" height="15"/>
+    <rect x="240" y="180" width="25" height="15"/>
+    <rect x="280" y="180" width="25" height="15"/>
+  </g>
+  <text x="50" y="460" font-family="sans-serif" font-weight="800" font-size="28" fill="#ffffff" opacity="0.9">COMMERCIAL CONSTRUCTION</text>
+  <text x="50" y="485" font-family="sans-serif" font-size="16" fill="#fbb900">Prime Corporate Office Headquarters</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="svcSky2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="500" fill="url(#svcSky2)"/>
+  <!-- Multi-Family Terrace Residences with Solar Garden -->
+  <polygon points="120,120 340,120 340,500 120,500" fill="#0284c7" opacity="0.8"/>
+  <polygon points="360,180 580,180 580,500 360,500" fill="#0369a1" opacity="0.85"/>
+  <!-- Glass Balconies -->
+  <g fill="#38bdf8" opacity="0.5">
+    <rect x="140" y="160" width="180" height="35" rx="3"/>
+    <rect x="140" y="230" width="180" height="35" rx="3"/>
+    <rect x="140" y="300" width="180" height="35" rx="3"/>
+    <rect x="140" y="370" width="180" height="35" rx="3"/>
+    <rect x="380" y="220" width="180" height="35" rx="3"/>
+    <rect x="380" y="290" width="180" height="35" rx="3"/>
+    <rect x="380" y="360" width="180" height="35" rx="3"/>
+  </g>
+  <!-- Greenery Rooftop -->
+  <rect x="120" y="110" width="220" height="10" fill="#10b981"/>
+  <rect x="360" y="170" width="220" height="10" fill="#10b981"/>
+  <text x="50" y="460" font-family="sans-serif" font-weight="800" font-size="28" fill="#ffffff" opacity="0.9">RESIDENTIAL CONSTRUCTION</text>
+  <text x="50" y="485" font-family="sans-serif" font-size="16" fill="#fbb900">Sustainable Urban High-Rise Living</text>
+</svg>
