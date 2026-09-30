@@ -35,10 +35,10 @@ Inspired by premium architectural designs and the Constrc design language, featu
 
 ```bash
 # Clone the repository
-git clone https://github.com/rideseto/<repo-name>.git
+git clone https://github.com/rideseto/constrc.git
 
 # Navigate into the project directory
-cd <repo-name>
+cd constrc
 
 # Install dependencies
 npm install
