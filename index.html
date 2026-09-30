@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constrc - Construction Business HTML-5 Template</title>
+  <meta name="description" content="Constrc - Construction Business HTML-5 Template with interactive 3D WebGL digital twin, scroll animations, and turnkey engineering.">
+
+  <!-- Google Fonts: Raleway (Headings), Lexend Deca (Accents/Badges), Manrope (Body), JetBrains Mono (Stats) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700;800&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Master Stylesheet -->
+  <script type="module" crossorigin src="./assets/index-DWMPhceU.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-2F0kEUt8.css">
+</head>
+<body>
+
+  <!-- Pinned Full-Bleed 3D WebGL Canvas Stage -->
+  <div id="webgl-canvas-container"></div>
+
+  <!-- Custom Cursor & Follower -->
+  <div class="cursor" id="custom-cursor"></div>
+  <div class="cursor-follower" id="custom-cursor-follower"></div>
+
+  <!-- Main Header -->
+  <header class="main-header">
+    <div class="header-lower">
+      <div class="inner-container">
+        <div class="d-flex justify-content-between align-items-center">
+          
+          <!-- Logo Box -->
+          <div class="logo-box">
+            <a href="#" class="logo">
+              <div class="logo-icon-svg">
+                <svg viewBox="0 0 24 24">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <div class="logo-text">
+                CONSTRC<span>.</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Navigation Menu -->
+          <nav class="main-menu">
+            <ul class="navigation clearfix">
+              <li><a href="#slider-section" class="nav-item active">Home</a></li>
+              <li><a href="#about-section" class="nav-item">About</a></li>
+              <li><a href="#services-section" class="nav-item">Services</a></li>
+              <li><a href="#projects-section" class="nav-item">Project</a></li>
+              <li><a href="#calculator-section" class="nav-item">3D Feasibility</a></li>
+              <li><a href="#faq-section" class="nav-item">FAQ</a></li>
+              <li><a href="#news-section" class="nav-item">Blog</a></li>
+              <li><a href="#contact-section" class="nav-item">Contact</a></li>
+            </ul>
+          </nav>
+
+          <!-- Outer Box Actions -->
+          <div class="outer-box">
+            <!-- Search Btn -->
+            <button class="search-box-btn" id="btn-open-search" aria-label="Search">
+              <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" fill="none" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+
+            <!-- Get a Quote Button -->
+            <div class="main-header_button">
+              <button class="theme-btn btn-style-three btn-open-proposal">
+                <span class="btn-wrap">
+                  <span class="text-one">GET A QUOTE <i>&rarr;</i></span>
+                  <span class="text-two">GET A QUOTE <i>&rarr;</i></span>
+                </span>
+              </button>
+            </div>
+
+            <!-- About Sidebar Hamburger -->
+            <button class="about-widget" id="btn-toggle-sidebar" aria-label="Open Sidebar Menu">
+              <span class="hamburger">
+                <span class="top-bun"></span>
+                <span class="meat"></span>
+                <span class="bottom-bun"></span>
+              </span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Slide-out Drawer -->
+  <aside class="about-sidebar" id="about-sidebar">
+    <div class="sidebar-inner">
+      <button class="close-sidebar-widget" id="btn-close-sidebar">&times;</button>
+      <div class="upper-box">
+        <div class="sidebar-image">
+          <img src="./assets/faq-lgqTYkdG.jpg" alt="About Constrc">
+        </div>
+        <div class="content-box">
+          <h3>About <span>Constrc</span></h3>
+          <div class="text">our clients, our employees, and our community through our commitment to leadership, excellence in craft, and attention to detail.</div>
+          <ul class="about-sidebar_list">
+            <li><a href="#testimonial-section">Testimonials</a></li>
+            <li><a href="#services-section">Outsourcing</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">HR Training</a></li>
+            <li><a href="#contact-section">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Social Box -->
+      <div class="social-box">
+        <a href="https://facebook.com/" aria-label="Facebook">FB</a>
+        <a href="https://twitter.com/" aria-label="Twitter">TW</a>
+        <a href="https://youtube.com/" aria-label="YouTube">YT</a>
+        <a href="https://instagram.com/" aria-label="Instagram">IG</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Floating Persistent 3D HUD Dock -->
+  <div class="floating-hud-dock">
+    <button class="hud-pill-btn btn-free-orbit" id="btn-toggle-orbit" title="Toggle free 360 mouse rotation">
+      <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+      <span id="orbit-btn-text">Free 360° Orbit</span>
+    </button>
+    <div class="hud-divider"></div>
+    <button class="hud-pill-btn active" data-lighting-mode="day">Day</button>
+    <button class="hud-pill-btn" data-lighting-mode="sunset">Sunset</button>
+    <button class="hud-pill-btn" data-lighting-mode="night">Night</button>
+    <button class="hud-pill-btn" data-lighting-mode="blueprint">X-Ray</button>
+    <div class="hud-divider"></div>
+    <button class="hud-pill-btn" id="btn-exploded-view" title="Exploded Structural Floor Plates">
+      <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2"><polyline points="16 16 12 12 8 16"></polyline><polyline points="8 8 12 12 16 8"></polyline></svg>
+      <span>Exploded</span>
+    </button>
+  </div>
+
+  <!-- Page Main Wrapper -->
+  <main class="page-wrapper">
+
+    <!-- ========================================================================
+         SECTION 1: HERO SLIDER (slider-one)
+         ======================================================================== -->
+    <section class="slider-one" id="slider-section">
+      <div class="auto-container">
+        <div class="slider-one_content reveal-on-scroll">
+          <div class="slider-one_content-inner">
+            
+            <div class="slider-one_title">
+              <span class="title-bar"></span>
+              <span>unleash digital potential</span>
+            </div>
+
+            <h1 class="slider-one_heading">
+              Your Trusted <span>Construction</span> Partner
+            </h1>
+
+            <div class="slider-one_text">
+              We developed landmark real estate projects that deliver lasting value to investors and communities. Experience next-generation 3D digital twin architecture and turnkey EPC execution.
+            </div>
+
+            <div class="slider-one_button d-flex align-items-center flex-wrap">
+              <button class="theme-btn btn-style-two btn-open-proposal">
+                <span class="btn-wrap">
+                  <span class="text-one">Work With Us <i>&rarr;</i></span>
+                  <span class="text-two">Work With Us <i>&rarr;</i></span>
+                </span>
+              </button>
+
+              <div class="slider-one_video">
+                <a href="#" class="lightbox-video play-box" id="hero-play-video" aria-label="Play Video">
+                  <span class="play-icon-tri">&#9658;</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- 4D BIM Simulation Phase Scrubber (Directly in Hero) -->
+            <div class="hero-bim-controller">
+              <div class="bim-controller-header">
+                <span>4D BIM Simulation Milestone:</span>
+                <span id="current-phase-pill" class="highlight-val">Phase 5: Facade & Commissioning</span>
+              </div>
+              <div class="scrubber-pills-row">
+                <button class="phase-step-card" data-phase="0"><span class="num">01</span><span class="lbl">Found.</span></button>
+                <button class="phase-step-card" data-phase="1"><span class="num">02</span><span class="lbl">Core</span></button>
+                <button class="phase-step-card" data-phase="2"><span class="num">03</span><span class="lbl">Diagrid</span></button>
+                <button class="phase-step-card" data-phase="3"><span class="num">04</span><span class="lbl">Modular</span></button>
+                <button class="phase-step-card active" data-phase="4"><span class="num">05</span><span class="lbl">Facade</span></button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider One Socials -->
+      <div class="slider-one_socials">
+        <a href="https://facebook.com/">facebook</a>
+        <a href="https://instagram.com/">instagram</a>
+        <a href="https://twitter.com/">twitter</a>
+      </div>
+
+      <!-- Slider Two Options / Reviews Card -->
+      <div class="slider-two_options reveal-on-scroll">
+        <div class="button">
+          <a class="service-btn" href="#about-section">More About Us &rarr;</a>
+        </div>
+        <div class="slider-two_authors">
+          <ul class="author-avatar-list">
+            <li style="background-image:url('./assets/author-1-D46k9Hly.jpg')"></li>
+            <li style="background-image:url('./assets/author-2-DqpgsSUE.jpg')"></li>
+            <li style="background-image:url('./assets/author-3-Cxu_V5T-.jpg')"></li>
+            <li style="background-image:url('./assets/author-4-C7yLlaH0.jpg')"></li>
+          </ul>
+          <div class="slider-two_reviews">
+            <span class="review-count">25k+</span> <br>
+            <span class="review-lbl">Clients Review</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 2: ABOUT ONE (about-one) - WHO WE ARE
+         ======================================================================== -->
+    <section class="about-one" id="about-section">
+      <div class="auto-container">
+        <div class="sec-title title-anim reveal-on-scroll">
+          <div class="sec-title_title">WHO WE ARE</div>
+          <h2 class="sec-title_heading">The largest privately held real estate investors and managers in the world</h2>
+        </div>
+
+        <div class="row clearfix">
+          <!-- Image Column -->
+          <div class="about-one_image-column col-lg-7 col-md-12 col-sm-12 reveal-on-scroll">
+            <div class="about-one_image-outer">
+              <div class="row clearfix">
+                <div class="column col-lg-5 col-md-6 col-sm-6">
+                  <div class="image card-glass">
+                    <img src="./assets/about-2-W8hVdfDm.jpg" alt="Engineering Worker">
+                  </div>
+                  <div class="about-one_button" style="margin-top: 1.5rem;">
+                    <a href="#services-section" class="theme-btn btn-style-three">
+                      <span class="btn-wrap">
+                        <span class="text-one">learn more <i>&rarr;</i></span>
+                        <span class="text-two">learn more <i>&rarr;</i></span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+                <div class="column col-lg-7 col-md-6 col-sm-6">
+                  <div class="image card-glass">
+                    <img src="./assets/about-3-DMIizQAf.jpg" alt="Architecture Sky Tower">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Column -->
+          <div class="about-one_content-column col-lg-5 col-md-12 col-sm-12 reveal-on-scroll">
+            <div class="about-one_content-outer">
+              <!-- Feature Block 1: Vision -->
+              <div class="feature-block_one">
+                <h4 class="feature-block_one-title">Our vision</h4>
+                <div class="feature-block_one-text">To empower businesses with cutting-edge web solutions that enhance their digital presence and drive growth.</div>
+              </div>
+
+              <!-- Feature Block 2: Mission -->
+              <div class="feature-block_one">
+                <h4 class="feature-block_one-title">Our mission</h4>
+                <div class="feature-block_one-text">Our solutions are designed to meet the needs of modern enterprises, ensuring they thrive in today’s competitive online landscape.</div>
+              </div>
+
+              <div class="row clearfix" style="margin-top: 1.5rem;">
+                <!-- Feature Block Two: Global Reach -->
+                <div class="feature-block_two col-lg-6 col-md-6 col-sm-6">
+                  <div class="feature-block_two-inner card-glass">
+                    <h4 class="feature-block_two-title">global reach</h4>
+                    <div class="feature-block_two_count"><span class="counter-value" data-target="85">0</span><sup>+</sup></div>
+                    <div class="feature-block_two_text">offices worldwide</div>
+                  </div>
+                </div>
+
+                <!-- Feature Block Two: Local Expertise -->
+                <div class="feature-block_two col-lg-6 col-md-6 col-sm-6">
+                  <div class="feature-block_two-inner card-glass">
+                    <h4 class="feature-block_two-title">local expertise</h4>
+                    <div class="feature-block_two_count"><span class="counter-value" data-target="1500">0</span><sup>+</sup></div>
+                    <div class="feature-block_two_text">employees</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 3: SERVICES (service-one) - AWESOME SERVICES
+         ======================================================================== -->
+    <section class="service-one" id="services-section">
+      <div class="auto-container">
+        <div class="inner-container card-glass-heavy">
+          <div class="row clearfix">
+            
+            <!-- Content Column -->
+            <div class="service-one_content-column col-lg-7 col-md-12 col-sm-12 reveal-on-scroll">
+              <div class="service-one_content-outer">
+                <div class="sec-title light title-anim">
+                  <div class="sec-title_title">Awesome Services</div>
+                  <h2 class="sec-title_heading">Construction Service To Our Clients</h2>
+                </div>
+
+                <div class="service-one_titles">
+                  <div class="service-one_title active" data-service-idx="0">
+                    <h4 class="service-one_heading"><a>Building Construction</a></h4>
+                    <span class="service-one_arrow">&rarr;</span>
+                  </div>
+                  <div class="service-one_title" data-service-idx="1">
+                    <h4 class="service-one_heading"><a>Residential Construction</a></h4>
+                    <span class="service-one_arrow">&rarr;</span>
+                  </div>
+                  <div class="service-one_title" data-service-idx="2">
+                    <h4 class="service-one_heading"><a>commercial Construction</a></h4>
+                    <span class="service-one_arrow">&rarr;</span>
+                  </div>
+                  <div class="service-one_title" data-service-idx="3">
+                    <h4 class="service-one_heading"><a>Architecture Design</a></h4>
+                    <span class="service-one_arrow">&rarr;</span>
+                  </div>
+                  <div class="service-one_title" data-service-idx="4">
+                    <h4 class="service-one_heading"><a>Renovation Planning</a></h4>
+                    <span class="service-one_arrow">&rarr;</span>
+                  </div>
+                  <div class="service-one_title" data-service-idx="5">
+                    <h4 class="service-one_heading"><a>Structural Engineering</a></h4>
+                    <span class="service-one_arrow">&rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Image Column / Interactive Preview -->
+            <div class="service-one_image-column col-lg-5 col-md-12 col-sm-12 reveal-on-scroll">
+              <div class="service-one_image_active_card card-glass">
+                <div class="service-card-img-wrap">
+                  <img id="service-preview-img" src="./assets/service-1-CZkc7pNq.jpg" alt="Service Preview">
+                </div>
+                <div class="service-one_content">
+                  <h3 class="service-one_sub-title" id="service-preview-title">Building Construction</h3>
+                  <div class="service-one_text" id="service-preview-text">
+                    Our solutions are designed to meet the needs of modern enterprises, ensuring they thrive in today’s competitive online landscape.
+                  </div>
+                  <div class="service-one_button">
+                    <button class="theme-btn btn-style-three btn-open-proposal">
+                      <span class="btn-wrap">
+                        <span class="text-one">Discover More <i>&rarr;</i></span>
+                        <span class="text-two">Discover More <i>&rarr;</i></span>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 4: PROJECTS (project-one) - OUR PROJECTS
+         ======================================================================== -->
+    <section class="project-one" id="projects-section">
+      <div class="auto-container">
+        <div class="sec-title title-anim centered reveal-on-scroll">
+          <div class="sec-title_title">Our Projects</div>
+          <h2 class="sec-title_heading">We Provide Effective <br> Solution in Construction</h2>
+        </div>
+
+        <div class="project-style-one-items">
+          <!-- Project 1 -->
+          <div class="project-block_one reveal-on-scroll">
+            <div class="project-block_one-inner card-glass">
+              <div class="project-block_one-image">
+                <img src="./assets/project-1-CokgHty_.jpg" alt="Project 1">
+                <div class="project-block_one-overlay">
+                  <div class="project-block_one-meta">
+                    <span class="badge-gold">Builder</span>
+                    <span class="loc-pin">&#128205; Hollywood, Florida</span>
+                  </div>
+                  <h3 class="project-block_one-heading"><a href="#">Work With <br> Energetic Team</a></h3>
+                  <div class="project-block_one-text">Our solutions are designed to meet the needs of modern enterprises, ensuring they thrive in today’s competitive online landscape.</div>
+                  <a href="#" class="project-block_one-arrow">&rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-block_one style-two reveal-on-scroll">
+            <div class="project-block_one-inner card-glass">
+              <div class="project-block_one-image">
+                <img src="./assets/project-2-a0455Leq.jpg" alt="Project 2">
+                <div class="project-block_one-overlay">
+                  <div class="project-block_one-meta">
+                    <span class="badge-gold">Builder</span>
+                    <span class="loc-pin">&#128205; Hollywood, Florida</span>
+                  </div>
+                  <h3 class="project-block_one-heading"><a href="#">Mixed-Use <br> Development</a></h3>
+                  <div class="project-block_one-text">Our solutions are designed to meet the needs of modern enterprises, ensuring they thrive in today’s competitive online landscape.</div>
+                  <a href="#" class="project-block_one-arrow">&rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-block_one reveal-on-scroll">
+            <div class="project-block_one-inner card-glass">
+              <div class="project-block_one-image">
+                <img src="./assets/project-3-BY4qSRlF.jpg" alt="Project 3">
+                <div class="project-block_one-overlay">
+                  <div class="project-block_one-meta">
+                    <span class="badge-gold">Builder</span>
+                    <span class="loc-pin">&#128205; Spotswood, NJ</span>
+                  </div>
+                  <h3 class="project-block_one-heading"><a href="#">Premier Office <br> Tower</a></h3>
+                  <div class="project-block_one-text">Our solutions are designed to meet the needs of modern enterprises, ensuring they thrive in today’s competitive online landscape.</div>
+                  <a href="#" class="project-block_one-arrow">&rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-block_one style-two reveal-on-scroll">
+            <div class="project-block_one-inner card-glass">
+              <div class="project-block_one-image">
+                <img src="./assets/project-4-CNFTxb-4.jpg" alt="Project 4">
+                <div class="project-block_one-overlay">
+                  <div class="project-block_one-meta">
+                    <span class="badge-gold">Builder</span>
+                    <span class="loc-pin">&#128205; Hollywood, Florida</span>
+                  </div>
+                  <h3 class="project-block_one-heading"><a href="#">Greenview <br> Apartments</a></h3>
+                  <div class="project-block_one-text">Our solutions are designed to meet the needs of modern enterprises, ensuring they thrive in today’s competitive online landscape.</div>
+                  <a href="#" class="project-block_one-arrow">&rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 5: TESTIMONIAL (testimonial-one)
+         ======================================================================== -->
+    <section class="testimonial-one" id="testimonial-section">
+      <div class="auto-container">
+        <div class="d-flex justify-content-between align-items-center flex-wrap reveal-on-scroll">
+          
+          <div class="testimonial-one_options d-flex align-items-center flex-wrap">
+            <div class="testimonial-one_reviews">
+              <span class="rev-num">5.9K Reviews</span>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+              </div>
+            </div>
+
+            <ul class="testimonial-one__authors author-avatar-list">
+              <li style="background-image:url('./assets/author-1-D46k9Hly.jpg')"></li>
+              <li style="background-image:url('./assets/author-2-DqpgsSUE.jpg')"></li>
+              <li style="background-image:url('./assets/author-3-Cxu_V5T-.jpg')"></li>
+              <li style="background-image:url('./assets/author-4-C7yLlaH0.jpg')"></li>
+            </ul>
+
+            <div class="testimonial-one__trusted">
+              Trusted by <span>world leading companies</span>
+            </div>
+          </div>
+
+          <div class="testimonial-one_button">
+            <a href="#services-section" class="theme-btn btn-style-three">
+              <span class="btn-wrap">
+                <span class="text-one">Discover More <i>&rarr;</i></span>
+                <span class="text-two">Discover More <i>&rarr;</i></span>
+              </span>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="testimonial-one_box card-glass reveal-on-scroll" style="margin-top: 3rem;">
+          <div class="testimonial-block_one-inner">
+            <div class="quote-glyph">&#10078;</div>
+            <div class="testimonial-block_one-text">
+              “They know their business and their approach, professional efforts and manner of doing business works well as a team player with the owners and their other consultants.”
+            </div>
+            <div class="testimonial-block_one-designation">
+              <strong>Ralph Adams</strong> <span>Construction Admin., Assistant Project Manager</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 6: COUNTER (counter-one)
+         ======================================================================== -->
+    <section class="counter-one" id="counter-section">
+      <div class="auto-container">
+        <div class="row clearfix">
+          
+          <div class="counter-block_one col-lg-3 col-md-6 col-sm-12 reveal-on-scroll">
+            <div class="counter-block_one-inner card-glass">
+              <div class="counter-block_one-count"><span class="counter-value" data-target="48">0</span><sup>+</sup></div>
+              <div class="counter-block_one-text">completed <br> projects</div>
+            </div>
+          </div>
+
+          <div class="counter-block_one col-lg-3 col-md-6 col-sm-12 reveal-on-scroll">
+            <div class="counter-block_one-inner card-glass">
+              <div class="counter-block_one-count"><span class="counter-value" data-target="52">0</span><sup>+</sup></div>
+              <div class="counter-block_one-text">projects in <br> development</div>
+            </div>
+          </div>
+
+          <div class="counter-block_one col-lg-3 col-md-6 col-sm-12 reveal-on-scroll">
+            <div class="counter-block_one-inner card-glass">
+              <div class="counter-block_one-count"><span class="counter-value" data-target="2.3" data-decimal="1">0</span>b<sup>+</sup></div>
+              <div class="counter-block_one-text">total projects <br> cost</div>
+            </div>
+          </div>
+
+          <div class="counter-block_one col-lg-3 col-md-6 col-sm-12 reveal-on-scroll">
+            <div class="counter-block_one-inner card-glass">
+              <div class="counter-block_one-count"><span class="counter-value" data-target="18">0</span>m<sup>+</sup></div>
+              <div class="counter-block_one-text">square feet <br> of property</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 7: FAQ (faq-one) - REGULAR QUESTION FOR CUSTOMER
+         ======================================================================== -->
+    <section class="faq-one" id="faq-section">
+      <div class="auto-container">
+        <div class="row clearfix">
+          
+          <!-- Image Column -->
+          <div class="faq-one_image-column col-lg-5 col-md-12 col-sm-12 reveal-on-scroll">
+            <div class="faq-one_image card-glass">
+              <img src="./assets/faq-lgqTYkdG.jpg" alt="FAQ Worker">
+            </div>
+          </div>
+
+          <!-- Accordion Column -->
+          <div class="faq-one_accordian-column col-lg-7 col-md-12 col-sm-12 reveal-on-scroll">
+            <div class="faq-one_accordian-outer">
+              <div class="sec-title title-anim">
+                <div class="sec-title_title">Construction Company</div>
+                <h2 class="sec-title_heading">regular Question for Customer</h2>
+              </div>
+
+              <!-- Accordion Box -->
+              <ul class="accordion-box">
+                <li class="accordion block active-block">
+                  <div class="acc-btn active"><span class="icon-chevron">&rsaquo;</span> What kind of warranty or guarantee does Elevate offer?</div>
+                  <div class="acc-content current">
+                    <div class="content">
+                      <div class="text">Fusce lacinia nulla consequat porta et viverra velit etiam, varius per condimentum lacus ultricies a placerat venatis semper donec id accumsan augue eleifend facili sis. Lectus arcu odio erat congue sociosqu ultricies</div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="accordion block">
+                  <div class="acc-btn"><span class="icon-chevron">&rsaquo;</span> Why should I choose elevate for my construction project?</div>
+                  <div class="acc-content">
+                    <div class="content">
+                      <div class="text">Fusce lacinia nulla consequat porta et viverra velit etiam, varius per condimentum lacus ultricies a placerat venatis semper donec id accumsan augue eleifend facili sis. Lectus arcu odio erat congue sociosqu ultricies</div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="accordion block">
+                  <div class="acc-btn"><span class="icon-chevron">&rsaquo;</span> What is the process for working with Elevate?</div>
+                  <div class="acc-content">
+                    <div class="content">
+                      <div class="text">Fusce lacinia nulla consequat porta et viverra velit etiam, varius per condimentum lacus ultricies a placerat venatis semper donec id accumsan augue eleifend facili sis. Lectus arcu odio erat congue sociosqu ultricies</div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="accordion block">
+                  <div class="acc-btn"><span class="icon-chevron">&rsaquo;</span> What types of projects does Elevate specialize in?</div>
+                  <div class="acc-content">
+                    <div class="content">
+                      <div class="text">Fusce lacinia nulla consequat porta et viverra velit etiam, varius per condimentum lacus ultricies a placerat venatis semper donec id accumsan augue eleifend facili sis. Lectus arcu odio erat congue sociosqu ultricies</div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Clients Box One / Partner Marquee -->
+        <div class="clients-box_one card-glass reveal-on-scroll" style="margin-top: 4rem;">
+          <div class="partner-badges-row">
+            <div class="partner-logo-pill">BROOKFIELD</div>
+            <div class="partner-logo-pill">TURNER</div>
+            <div class="partner-logo-pill">SKANSKA</div>
+            <div class="partner-logo-pill">PROLOGIS</div>
+            <div class="partner-logo-pill">JACOBS</div>
+            <div class="partner-logo-pill">AECOM</div>
+          </div>
+          <div class="text-center" style="margin-top: 1.5rem;">
+            <div class="client-one_subtitle">we’re proud to partner with best-in-class clients</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 8: 3D BIM FEASIBILITY & ROI ESTIMATOR (Dynamic Integrated Studio)
+         ======================================================================== -->
+    <section class="interactive-studio-section" id="calculator-section">
+      <div class="auto-container">
+        <div class="sec-title centered title-anim reveal-on-scroll">
+          <div class="sec-title_title">Interactive 3D Studio & Feasibility</div>
+          <h2 class="sec-title_heading">Calculate Your Project CapEx & Schedule ROI</h2>
+          <div class="sec-title_text" style="max-width: 780px; margin: 0 auto; color: var(--text-body);">
+            Inspect the active 3D skyscraper model from any angle or toggle free 360° orbit above. Dynamically model your gross floor area, building height, and modular delivery savings below.
+          </div>
+        </div>
+
+        <div class="calculator-container card-glass-heavy reveal-on-scroll">
+          <!-- Inputs Column -->
+          <div class="calc-inputs-col">
+            <div class="calc-group">
+              <label class="calc-group-label">Asset Classification</label>
+              <div class="pill-toggle-grid">
+                <button class="pill-option-btn active" data-calc-type="commercial">Commercial Tower</button>
+                <button class="pill-option-btn" data-calc-type="mixed">Urban Mixed-Use</button>
+                <button class="pill-option-btn" data-calc-type="logistics">Smart Logistics Hub</button>
+                <button class="pill-option-btn" data-calc-type="residential">Green Residential</button>
+              </div>
+            </div>
+
+            <div class="calc-group">
+              <div class="calc-group-label">
+                <span>Gross Floor Area</span>
+                <span class="calc-val-display" id="calc-area-display">650k sq ft</span>
+              </div>
+              <input type="range" class="calc-range-slider" id="calc-area-slider" min="150000" max="2000000" step="50000" value="650000">
+            </div>
+
+            <div class="calc-group">
+              <div class="calc-group-label">
+                <span>Building Height</span>
+                <span class="calc-val-display" id="calc-stories-display">36 Floors</span>
+              </div>
+              <input type="range" class="calc-range-slider" id="calc-stories-slider" min="10" max="75" step="1" value="36">
+            </div>
+
+            <div class="calc-group">
+              <label class="calc-group-label">Delivery Framework</label>
+              <div class="pill-toggle-grid">
+                <button class="pill-option-btn active" data-calc-method="modular">CONSTRC Modular Prefab</button>
+                <button class="pill-option-btn" data-calc-method="traditional">Traditional Cast-In-Place</button>
+              </div>
+            </div>
+
+            <div class="calc-group">
+              <label class="calc-group-label">Sustainability Standard</label>
+              <div class="pill-toggle-grid">
+                <button class="pill-option-btn active" data-calc-sust="leed">LEED Platinum Net-Zero</button>
+                <button class="pill-option-btn" data-calc-sust="standard">Code Minimum Standard</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results Column -->
+          <div class="calc-results-col">
+            <div>
+              <h3 style="font-size:1.35rem; font-weight:800; font-family:var(--font-heading); margin-bottom:0.4rem; color:#fff;">Projected Feasibility Model</h3>
+              <p style="font-size:0.88rem; color:var(--text-muted);">Real-time calculation based on actual CONSTRC turnkey delivery benchmarks.</p>
+            </div>
+
+            <div class="results-grid">
+              <div class="result-card primary-stat">
+                <div class="result-metric-title">Estimated Total CapEx</div>
+                <div class="result-metric-num" id="stat-capex">.1M</div>
+                <div class="result-comparison-note" id="stat-savings-note">
+                  <span class="check">&check;</span> Saves est. .1M in overhead & financing interest
+                </div>
+              </div>
+
+              <div class="result-card">
+                <div class="result-metric-title">Schedule Compression</div>
+                <div class="result-metric-num" id="stat-months-saved" style="color:var(--accent-amber);">-14 Mo</div>
+              </div>
+
+              <div class="result-card">
+                <div class="result-metric-title">Projected Project IRR</div>
+                <div class="result-metric-num" id="stat-irr" style="color:#f59e0b;">19.4%</div>
+              </div>
+
+              <div class="result-card" style="grid-column: span 2;">
+                <div class="result-metric-title">Embodied Carbon Reduction</div>
+                <div class="result-metric-num" id="stat-carbon" style="color:var(--accent-green);">14,040 t</div>
+              </div>
+            </div>
+
+            <button class="theme-btn btn-style-three btn-open-proposal" style="width:100%; justify-content:center;">
+              <span class="btn-wrap">
+                <span class="text-one">GENERATE RFP PACKAGE <i>&rarr;</i></span>
+                <span class="text-two">GENERATE RFP PACKAGE <i>&rarr;</i></span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Comparative Benchmark Audit Table -->
+        <div class="comparison-table-wrapper card-glass reveal-on-scroll" style="margin-top: 3.5rem;">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Performance Dimension</th>
+                <th>Traditional General Contractor</th>
+                <th class="highlight-col">CONSTRC Integrated Platform</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Schedule Delivery</strong></td>
+                <td>Frequent delays (avg. +24% slippage)</td>
+                <td class="highlight-cell"><strong>40% Accelerated</strong> via Off-site Prefabrication</td>
+              </tr>
+              <tr>
+                <td><strong>Cost Overrun Exposure</strong></td>
+                <td>High claim volume; change orders avg. 12–18%</td>
+                <td class="highlight-cell"><strong>Zero Change Orders</strong> on turnkey scope</td>
+              </tr>
+              <tr>
+                <td><strong>Quality & Tolerance</strong></td>
+                <td>Weather-dependent manual site fabrication</td>
+                <td class="highlight-cell"><strong>Factory Robotic Assembly</strong> with laser tolerance</td>
+              </tr>
+              <tr>
+                <td><strong>Job-Site Safety</strong></td>
+                <td>Industry LTIFR avg. 1.84 per million hours</td>
+                <td class="highlight-cell"><strong>0.00 LTIFR</strong> with AI crane & zone geofencing</td>
+              </tr>
+              <tr>
+                <td><strong>Carbon & ESG Footprint</strong></td>
+                <td>Heavy site waste; traditional cement</td>
+                <td class="highlight-cell"><strong>LEED Platinum Certified</strong>; 40% carbon cut</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 9: CONTACT ONE (contact-one) - LET'S WORK TOGETHER
+         ======================================================================== -->
+    <section class="contact-one" id="contact-section">
+      <div class="auto-container">
+        <div class="sec-title reveal-on-scroll">
+          <div class="d-flex justify-content-between align-items-end flex-wrap">
+            <div class="left-box">
+              <div class="sec-title_title">contact us</div>
+              <h2 class="sec-title_heading">Let’s Work Together</h2>
+            </div>
+            <div class="right-box">
+              <div class="sec-title_text">We’d love to share more with you, please complete this form and <br> our dedicated team will get back to you shortly.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row clearfix" style="margin-top: 2.5rem;">
+          <!-- Contact Info Column -->
+          <div class="column col-lg-6 col-md-12 col-sm-12 reveal-on-scroll">
+            <div class="row clearfix">
+              
+              <div class="info-block_one col-lg-6 col-md-6 col-sm-6">
+                <div class="info-block_one-inner card-glass">
+                  <div class="info-block_one-icon">&#9742;</div>
+                  <strong>Call Us</strong>
+                  <span>+00 (47) 939 4888</span>
+                </div>
+              </div>
+
+              <div class="info-block_one col-lg-6 col-md-6 col-sm-6">
+                <div class="info-block_one-inner card-glass">
+                  <div class="info-block_one-icon">&#9993;</div>
+                  <strong>Our Email Us</strong>
+                  <span>example@gmail.com</span>
+                </div>
+              </div>
+
+              <div class="info-block_one col-lg-6 col-md-6 col-sm-6">
+                <div class="info-block_one-inner card-glass">
+                  <div class="info-block_one-icon">&#9201;</div>
+                  <strong>Opening Hours</strong>
+                  <span>Mon - Fri: 09am - 07pm</span>
+                </div>
+              </div>
+
+              <div class="info-block_one col-lg-6 col-md-6 col-sm-6">
+                <div class="info-block_one-inner card-glass">
+                  <div class="info-block_one-icon">&#128205;</div>
+                  <strong>Location</strong>
+                  <span>1712 Down Street Monmouth</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Contact Form Column -->
+          <div class="column col-lg-6 col-md-12 col-sm-12 reveal-on-scroll">
+            <div class="contact-form card-glass">
+              <form id="main-contact-form">
+                <div class="row clearfix">
+                  <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                    <input type="text" name="username" placeholder="First Name" required>
+                  </div>
+                  <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                    <input type="text" name="lastname" placeholder="Last Name" required>
+                  </div>
+                  <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                    <input type="email" name="email" placeholder="Email address" required>
+                  </div>
+                  <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                    <input type="text" name="services" placeholder="Services" required>
+                  </div>
+                  <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                    <textarea name="message" placeholder="Your Message" rows="4"></textarea>
+                  </div>
+                  <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                      <div class="contact-form_text">We're excited to connect with you! <br> Required fields are marked *</div>
+                      <button type="submit" class="theme-btn btn-style-three">
+                        <span class="btn-wrap">
+                          <span class="text-one">Contact Now <i>&rarr;</i></span>
+                          <span class="text-two">Contact Now <i>&rarr;</i></span>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Expand Section -->
+        <div class="video-image expand-section card-glass reveal-on-scroll" style="margin-top: 4rem;">
+          <img src="./assets/video-C4t_Aw5E.jpg" alt="Video Preview">
+          <a href="#" class="contact-one_video play-box" id="video-expand-play" aria-label="Play Full Video">
+            <span class="play-icon-tri">&#9658;</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 10: MARKETING ONE (marketing-one) - ANIMATED MARQUEE
+         ======================================================================== -->
+    <section class="marketing-one">
+      <div class="outer-container">
+        <div class="animation_mode marquee-track-one">
+          <span>High-Quality Craftsmanship</span> <span class="m-star">&#9733;</span>
+          <span class="light">Home Construction</span> <span class="m-star">&#9733;</span>
+          <span>Building Construction</span> <span class="m-star">&#9733;</span>
+          <span>High-Quality Craftsmanship</span> <span class="m-star">&#9733;</span>
+          <span class="light">Home Construction</span> <span class="m-star">&#9733;</span>
+        </div>
+        <div class="animation_mode-two marquee-track-two">
+          <span>Architecture & Building</span> <span class="m-star">&#9733;</span>
+          <span class="light">Material Recycling</span> <span class="m-star">&#9733;</span>
+          <span>Tools and Equipment</span> <span class="m-star">&#9733;</span>
+          <span>Building Construction</span> <span class="m-star">&#9733;</span>
+          <span>Architecture & Building</span> <span class="m-star">&#9733;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 11: NEWS ONE (news-one) - OUR BLOG & NEWS
+         ======================================================================== -->
+    <section class="news-one" id="news-section">
+      <div class="auto-container">
+        <div class="sec-title reveal-on-scroll">
+          <div class="d-flex justify-content-between align-items-center flex-wrap">
+            <div class="left-box">
+              <div class="sec-title_title">Our Blog & News</div>
+              <h2 class="sec-title_heading">Latest News Posts <br> And Articles</h2>
+            </div>
+            <div class="news-one_button">
+              <a href="#" class="theme-btn btn-style-three">
+                <span class="btn-wrap">
+                  <span class="text-one">VIEW ALL POST <i>&rarr;</i></span>
+                  <span class="text-two">VIEW ALL POST <i>&rarr;</i></span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row clearfix" style="margin-top: 3rem;">
+          <!-- News 1 -->
+          <div class="news-block_one col-lg-4 col-md-6 col-sm-12 reveal-on-scroll">
+            <div class="news-block_one-inner card-glass">
+              <div class="news-block_one-image_outer">
+                <div class="news-block_one-date">30 MAY</div>
+                <div class="news-block_one-image">
+                  <img src="./assets/news-1-DwjXbzBl.jpg" alt="News 1">
+                </div>
+              </div>
+              <div class="news-block_one-content">
+                <ul class="news-block_one-meta">
+                  <li>By Admin</li>
+                  <li>02 Comments</li>
+                </ul>
+                <h4 class="news-block_one-title"><a href="#">A Guide to Hassle-Free Cross-Border Shipping</a></h4>
+                <div class="news-block_one-button">
+                  <a class="news-block_one-more" href="#">READ MORE &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- News 2 -->
+          <div class="news-block_one col-lg-4 col-md-6 col-sm-12 reveal-on-scroll">
+            <div class="news-block_one-inner card-glass">
+              <div class="news-block_one-image_outer">
+                <div class="news-block_one-date">09 JUN</div>
+                <div class="news-block_one-image">
+                  <img src="./assets/news-2-UWZ7rPLA.jpg" alt="News 2">
+                </div>
+              </div>
+              <div class="news-block_one-content">
+                <ul class="news-block_one-meta">
+                  <li>By Admin</li>
+                  <li>02 Comments</li>
+                </ul>
+                <h4 class="news-block_one-title"><a href="#">Why Timely Delivery Matters: Building Customer Trust</a></h4>
+                <div class="news-block_one-button">
+                  <a class="news-block_one-more" href="#">READ MORE &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- News 3 -->
+          <div class="news-block_one col-lg-4 col-md-6 col-sm-12 reveal-on-scroll">
+            <div class="news-block_one-inner card-glass">
+              <div class="news-block_one-image_outer">
+                <div class="news-block_one-date">23 APR</div>
+                <div class="news-block_one-image">
+                  <img src="./assets/news-3-Dr_bCb_8.jpg" alt="News 3">
+                </div>
+              </div>
+              <div class="news-block_one-content">
+                <ul class="news-block_one-meta">
+                  <li>By Admin</li>
+                  <li>02 Comments</li>
+                </ul>
+                <h4 class="news-block_one-title"><a href="#">How to Choose the Best Freight Solution Your Business</a></h4>
+                <div class="news-block_one-button">
+                  <a class="news-block_one-more" href="#">READ MORE &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 12: MAIN FOOTER (main-footer)
+         ======================================================================== -->
+    <footer class="main-footer">
+      <div class="auto-container">
+        <div class="widgets-section">
+          <div class="row clearfix">
+
+            <!-- Footer Column 1: Logo & About -->
+            <div class="main-footer_column col-lg-4 col-md-6 col-sm-12">
+              <div class="logo-widget">
+                <div class="main-footer_logo">
+                  <a href="#" class="logo">
+                    <div class="logo-text">CONSTRC<span>.</span></div>
+                  </a>
+                </div>
+                <div class="main-footer_text">
+                  our clients, our employees, and our community through our commitment to leadership, excellence in craft, and attention to detail.
+                </div>
+                <div class="main-footer_socials">
+                  <span>Follow Us:</span>
+                  <a href="https://facebook.com/" aria-label="Facebook">FB</a>
+                  <a href="https://instagram.com/" aria-label="Instagram">IG</a>
+                  <a href="https://twitter.com/" aria-label="Twitter">TW</a>
+                  <a href="https://dribbble.com/" aria-label="Dribbble">DR</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer Column 2: Our Services -->
+            <div class="main-footer_column col-lg-2 col-md-6 col-sm-12">
+              <div class="links-widget">
+                <h4 class="main-footer_title">Our Services</h4>
+                <ul class="main-footer_links">
+                  <li><a href="#services-section">Solutions</a></li>
+                  <li><a href="#calculator-section">Pricing</a></li>
+                  <li><a href="#about-section">Meet Our Team</a></li>
+                  <li><a href="#news-section">Blog</a></li>
+                  <li><a href="#">HR Guides</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Footer Column 3: Quick Links -->
+            <div class="main-footer_column col-lg-2 col-md-6 col-sm-12">
+              <div class="links-widget">
+                <h4 class="main-footer_title">Quick Links</h4>
+                <ul class="main-footer_links">
+                  <li><a href="#testimonial-section">Testimonials</a></li>
+                  <li><a href="#services-section">Outsourcing</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">HR Training</a></li>
+                  <li><a href="#contact-section">Careers</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Footer Column 4: Newsletter -->
+            <div class="main-footer_column col-lg-4 col-md-6 col-sm-12">
+              <div class="newsletter-widget">
+                <h4 class="main-footer_title">Newsletter</h4>
+                <div class="main-footer_text">our clients, our employees, and our community through our commitment.</div>
+                <div class="newsletter-box">
+                  <form id="newsletter-form">
+                    <div class="form-group">
+                      <input type="email" name="email" placeholder="Enter Your Email Address" required>
+                      <button type="submit" class="theme-btn btn-style-three">
+                        <span class="btn-wrap">
+                          <span class="text-one">Subscribe <i>&rarr;</i></span>
+                          <span class="text-two">Subscribe <i>&rarr;</i></span>
+                        </span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="main-footer_bottom">
+          <div class="d-flex justify-content-between align-items-center flex-wrap">
+            <div class="main-footer_copyright">Copyright &copy; 2026 - All rights Reserved By Constrc / Expert Themes</div>
+            <ul class="main-footer_navs">
+              <li><a href="#">Support Center</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Tender Proposal Modal Dialog -->
+  <div class="modal-backdrop" id="proposal-modal">
+    <div class="modal-box card-glass-heavy">
+      <button class="modal-close-btn" id="btn-close-modal">&times;</button>
+      <div>
+        <div style="margin-bottom:1.75rem;">
+          <div class="sec-title_title">COMMERCIAL TENDER RFP</div>
+          <h3 style="font-size:1.6rem; font-weight:800; font-family:var(--font-heading); color:#fff; margin-bottom:0.5rem;">Request a Project RFP Package</h3>
+          <p style="font-size:0.9rem; color:var(--text-muted); line-height:1.6;">
+            Connect directly with our engineering and capital concessions committee to receive a preliminary 4D BIM feasibility audit within 24 hours.
+          </p>
+        </div>
+
+        <form id="proposal-form">
+          <div class="form-group">
+            <label class="form-label">Developer / Entity Name</label>
+            <input type="text" class="form-input" placeholder="e.g. Brookfield Urban Real Estate Group" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Contact Work Email</label>
+            <input type="email" class="form-input" placeholder="capital.director@enterprise.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Project Type & Location</label>
+            <select class="form-select">
+              <option>Commercial Skyscraper (40+ Stories)</option>
+              <option>Urban Mixed-Use District</option>
+              <option>Smart Logistics & Industrial Park</option>
+              <option>Civil Infrastructure Concession (PPP / BOOT)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Target Gross Floor Area</label>
+            <input type="text" class="form-input" placeholder="e.g. 750,000 sq ft">
+          </div>
+
+          <button type="submit" class="theme-btn btn-style-three" style="width:100%; justify-content:center; margin-top:1.25rem;">
+            <span class="btn-wrap">
+              <span class="text-one">SUBMIT FOR TECHNICAL REVIEW <i>&rarr;</i></span>
+              <span class="text-two">SUBMIT FOR TECHNICAL REVIEW <i>&rarr;</i></span>
+            </span>
+          </button>
+        </form>
+
+        <div id="proposal-success" style="display:none; text-align:center; padding:2rem 0;">
+          <div style="font-size:3rem; color:var(--accent-amber); margin-bottom:1rem;">&#10004;</div>
+          <h4 style="font-size:1.35rem; font-weight:800; font-family:var(--font-heading); color:#fff; margin-bottom:0.5rem;">Tender Application Initiated</h4>
+          <p style="font-size:0.92rem; color:var(--text-muted); line-height:1.6;">
+            Our Chief Estimator and Pre-Construction Director will review your asset specifications and deliver a preliminary 4D BIM schedule audit within 24 business hours.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Popup Modal -->
+  <div class="search-popup" id="search-popup">
+    <div class="color-layer"></div>
+    <button class="close-search" id="btn-close-search">&times;</button>
+    <div class="search-box-content">
+      <form id="site-search-form">
+        <div class="form-group">
+          <input type="search" name="search-field" placeholder="Search Here..." required>
+          <button type="submit">&rarr;</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Application Entrypoint -->
+</body>
+</html>
